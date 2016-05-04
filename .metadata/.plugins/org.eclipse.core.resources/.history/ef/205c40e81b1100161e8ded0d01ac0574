@@ -1,0 +1,25 @@
+package com.cc.cxf01.Service;
+
+import javax.xml.ws.Endpoint;
+
+
+public class P01_Service_HelloWordProvider {
+	
+	public String address01  = "http://localhost:9000/p01_helloword" ;
+
+	public P01_Service_HelloWordProvider() {
+		System.out.println("Provider Start:------");
+		p01_helloword p01_helloword = new p01_hellowordimpl();
+		Endpoint.publish(address01, p01_helloword);
+		
+	}
+	
+	public static void main(String[] args) throws InterruptedException {
+		new P01_Service_HelloWordProvider();
+		System.out.println("provider impl");
+	//	Thread.sleep(5*1000*60);
+		System.out.println("provider exit");
+		//System.exit(0);
+	}
+
+}

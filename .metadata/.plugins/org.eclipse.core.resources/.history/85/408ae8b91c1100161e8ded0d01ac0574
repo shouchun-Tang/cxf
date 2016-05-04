@@ -1,0 +1,16 @@
+package com.cc.cxf01.Service;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+
+@WebService( endpointInterface = "com.cc.cxf01.Service.p01_helloword" serviceName="p01_helloword")
+public class p01_hellowordimpl implements p01_helloword {
+
+
+	public String SayHello(@WebParam(name="text" )String text) {
+		System.out.println("ServiceImpl:text="+text);
+		return "service"+text;
+	}
+
+}

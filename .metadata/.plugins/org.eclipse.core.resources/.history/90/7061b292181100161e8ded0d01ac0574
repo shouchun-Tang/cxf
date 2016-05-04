@@ -1,0 +1,5 @@
+package com.cc.cxf01.Service;
+
+public class P01_Service_HelloWordProvider {
+
+}

@@ -1,0 +1,15 @@
+package com.cc.cxf01.Service;
+
+import javax.jws.WebParam;
+import javax.jws.WebService;
+
+@WebService(serviceName="P01_HelloWord")
+public class P01_HelloWordImpl implements P01_HelloWord {
+
+	@Override
+	public String SayHello(@WebParam(name="text" )String text) {
+		System.out.println("ServiceImpl:text="+text);
+		return "service"+text;
+	}
+
+}

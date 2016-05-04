@@ -1,0 +1,10 @@
+package com.cc.cxf01.Service;
+
+import javax.jws.WebService;
+
+	@WebService
+	public interface  P01_HelloWord {
+		
+	}
+
+

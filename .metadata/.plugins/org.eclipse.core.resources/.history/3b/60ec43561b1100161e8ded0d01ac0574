@@ -1,0 +1,15 @@
+package com.cc.cxf01.Service;
+
+import javax.jws.WebParam;
+import javax.jws.WebService;
+
+	@WebService
+	public interface  P01_HelloWord {
+		
+	String SayHello(@WebParam(name="text") String text);
+	
+
+	
+	}
+
+
